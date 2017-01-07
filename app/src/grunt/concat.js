@@ -96,11 +96,12 @@ module.exports = function (grunt, option) {
                 '<%= path.tmp %>/jquery.fileupload.min.js',                     //  18 kb
                 '<%= path.tmp %>/jquery.fileupload-process.min.js',             //   2 kb
                 '<%= path.tmp %>/jquery.fileupload-validate.min.js',            //   2 kb
+                '<%= path.tmp %>/tether.min.js',                                //  24 kb
                 '<%= path.tmp %>/bootstrap.min.js',                             //  24 kb
                 '<%= path.src.npm %>/select2/dist/js/select2.min.js',           //  62 kb
                 '<%= path.tmp %>/moment.min.js',                                //  35 kb
                 '<%= path.tmp %>/modernizr-custom.min.js',                      //   5 kb
-                '<%= path.tmp %>/select2.sortable.min.js'                           //   5 kb
+                '<%= path.tmp %>/select2.sortable.min.js'                       //   5 kb
             ],
             dest: '<%= path.dest.js %>/lib.js'
         },
