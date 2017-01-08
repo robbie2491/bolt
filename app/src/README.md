@@ -38,7 +38,6 @@ Quick Start
     brew install yarn
 ```
 
-
 #### Windows
 
 Download and install the MSI from [Yarn's site](https://yarnpkg.com/latest.msi)
@@ -55,6 +54,15 @@ Download and install the MSI from [Yarn's site](https://yarnpkg.com/latest.msi)
 
 ```
     yarn run grunt build
+```
+
+### Updating dependencies to their latest versions:
+
+Use `ncu` to check for packages that have major updates, not caught by the regular update that respects SemVer. If you don't foresee problems, run `ncu -u`. Next, upgrade yarn:
+
+```
+    yarn upgrade
+    yarn install
 ```
 
 
