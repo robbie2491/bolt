@@ -54,9 +54,7 @@ Download and install the MSI from [Yarn's site](https://yarnpkg.com/latest.msi)
 ### Rebuild CSS & JavaScript:
 
 ```
-    yarn run grunt updateLib
-    yarn run grunt prepareCkeditor 
-    yarn run grunt updateBolt
+    yarn run grunt build
 ```
 
 
@@ -65,6 +63,9 @@ Available grunt tasks
 
 - **`grunt`**<br> Starts the watch task that monitors the Javascript and Sass source files and
   automatically rebuilds `bolt.js`, `bolt.css` and `liveeditor.css` when changes are detected.
+
+- **`grunt build`**<br> Rebuild all JS and CSS assets. Basically runs
+  `updateLib`, `prepareCkeditor` and `updateBolt` sequentially.
 
 - **`grunt updateBolt`**<br> Manually starts a rebuild of `bolt.js`, `bolt.css` and
   `liveeditor.css`.
@@ -122,7 +123,7 @@ enable generation of sourcemaps looks like this:
 ### Pages
 
 For the linting tasks you have to define a list of pages to download to the
-`tmp/pages` folder. If it doesn't yet exist, create the file 
+`tmp/pages` folder. If it doesn't yet exist, create the file
 `app/src/grunt-local/pages.js`. A sample file to enable this task looks like this:
 
 ```javascript
@@ -260,7 +261,7 @@ You can override Bootlint options, e.g.:
 
 ### Htmllint
 
-If it doesn't yet exist, create the file `app/src/grunt-local/htmllint.js`. 
+If it doesn't yet exist, create the file `app/src/grunt-local/htmllint.js`.
 
 You can override Htmllint options, e.g.:
 
