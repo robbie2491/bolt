@@ -162,6 +162,7 @@ asynckit@^0.4.0:
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 autoprefixer@~6.7.2:
   version "6.7.2"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-6.7.2.tgz#172ab07b998ae9b957530928a59a40be54a45023"
@@ -176,12 +177,21 @@ autoprefixer@~6.6.1:
   version "6.6.1"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-6.6.1.tgz#11a4077abb4b313253ec2f6e1adb91ad84253519"
   dependencies:
+=======
+autoprefixer@~6.6.1:
+  version "6.6.1"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-6.6.1.tgz#11a4077abb4b313253ec2f6e1adb91ad84253519"
+  dependencies:
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
     browserslist "~1.5.1"
     caniuse-db "^1.0.30000604"
     normalize-range "^0.1.2"
     num2fraction "^1.2.2"
     postcss "^5.2.8"
+<<<<<<< HEAD
 >>>>>>> Splitting up "dependencies" and "devDependencies". For legibility, mostly.
+=======
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
     postcss-value-parser "^3.2.3"
 
 aws-sign2@~0.6.0:
@@ -243,6 +253,7 @@ blueimp-canvas-to-blob@3.5.0:
   resolved "https://registry.yarnpkg.com/blueimp-canvas-to-blob/-/blueimp-canvas-to-blob-3.5.0.tgz#5679ac32f6a2835821f0c3ad661719ff85a9236b"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 blueimp-file-upload@9.16.0:
   version "9.16.0"
   resolved "https://registry.yarnpkg.com/blueimp-file-upload/-/blueimp-file-upload-9.16.0.tgz#4a08fa28b58297a8363c13637457606cb0170372"
@@ -251,6 +262,11 @@ blueimp-file-upload@9.14.2:
   version "9.14.2"
   resolved "https://registry.yarnpkg.com/blueimp-file-upload/-/blueimp-file-upload-9.14.2.tgz#5da426f1dd8d59de984ab697cd83b9ba8f85b47c"
 >>>>>>> Splitting up "dependencies" and "devDependencies". For legibility, mostly.
+=======
+blueimp-file-upload@9.14.2:
+  version "9.14.2"
+  resolved "https://registry.yarnpkg.com/blueimp-file-upload/-/blueimp-file-upload-9.14.2.tgz#5da426f1dd8d59de984ab697cd83b9ba8f85b47c"
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
   optionalDependencies:
     blueimp-canvas-to-blob "3.5.0"
     blueimp-load-image "2.9.0"
@@ -354,6 +370,7 @@ browserify-zlib@^0.1.4:
     pako "~0.2.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 browserslist@^1.7.1:
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-1.7.2.tgz#cf4977283c3e692d6dcc241192e9de91504ff331"
@@ -367,6 +384,13 @@ browserslist@~1.5.1:
   dependencies:
     caniuse-db "^1.0.30000604"
 >>>>>>> Splitting up "dependencies" and "devDependencies". For legibility, mostly.
+=======
+browserslist@~1.5.1:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-1.5.2.tgz#1c82fde0ee8693e6d15c49b7bff209dc06298c56"
+  dependencies:
+    caniuse-db "^1.0.30000604"
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
 
 buffer-crc32@~0.2.3:
   version "0.2.13"
@@ -427,6 +451,7 @@ camelcase@^3.0.0:
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-3.0.0.tgz#32fc4b9fcdaf845fcdf7e73bb97cac2261f0ab0a"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 caniuse-db@^1.0.30000618, caniuse-db@^1.0.30000622:
   version "1.0.30000623"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000623.tgz#6e9dc4385d00a8f587efbb23fcbed7916f186e5d"
@@ -435,6 +460,11 @@ caniuse-db@^1.0.30000604:
   version "1.0.30000604"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000604.tgz#bc139270a777564d19c0aadcd832b491d093bda5"
 >>>>>>> Splitting up "dependencies" and "devDependencies". For legibility, mostly.
+=======
+caniuse-db@^1.0.30000604:
+  version "1.0.30000604"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000604.tgz#bc139270a777564d19c0aadcd832b491d093bda5"
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -542,12 +572,17 @@ code-point-at@^1.0.0:
 
 coffee-script@^1.10.0, coffee-script@^1.9.0:
 <<<<<<< HEAD
+<<<<<<< HEAD
   version "1.12.3"
   resolved "https://registry.yarnpkg.com/coffee-script/-/coffee-script-1.12.3.tgz#de5f4b1b934a4e9f915c57acd7ad323f68f715db"
 =======
   version "1.12.2"
   resolved "https://registry.yarnpkg.com/coffee-script/-/coffee-script-1.12.2.tgz#0d4cbdee183f650da95419570c4929d08ef91376"
 >>>>>>> Splitting up "dependencies" and "devDependencies". For legibility, mostly.
+=======
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/coffee-script/-/coffee-script-1.12.2.tgz#0d4cbdee183f650da95419570c4929d08ef91376"
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
 
 coffee-script@~1.10.0:
   version "1.10.0"
@@ -1018,10 +1053,14 @@ es6-set@~0.1.3:
     event-emitter "~0.3.4"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 es6-symbol@~3.1, es6-symbol@~3.1.0, es6-symbol@3:
 =======
 es6-symbol@^3.0.2, es6-symbol@~3.1, es6-symbol@~3.1.0, es6-symbol@3:
 >>>>>>> Splitting up "dependencies" and "devDependencies". For legibility, mostly.
+=======
+es6-symbol@^3.0.2, es6-symbol@~3.1, es6-symbol@~3.1.0, es6-symbol@3:
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/es6-symbol/-/es6-symbol-3.1.0.tgz#94481c655e7a7cad82eba832d97d5433496d7ffa"
   dependencies:
@@ -1056,12 +1095,17 @@ escope@^3.6.0:
 
 eslint@^3.0.0:
 <<<<<<< HEAD
+<<<<<<< HEAD
   version "3.15.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.15.0.tgz#bdcc6a6c5ffe08160e7b93c066695362a91e30f2"
 =======
   version "3.13.0"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.13.0.tgz#636925fd163c9babe2e8be7ae43caf518d469577"
 >>>>>>> Splitting up "dependencies" and "devDependencies". For legibility, mostly.
+=======
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-3.13.0.tgz#636925fd163c9babe2e8be7ae43caf518d469577"
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
   dependencies:
     babel-code-frame "^6.16.0"
     chalk "^1.1.3"
@@ -1702,6 +1746,7 @@ grunt-eslint@~19.0.0:
     eslint "^3.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 grunt-html@~8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/grunt-html/-/grunt-html-8.3.2.tgz#8fd65f805fbfa566767cd35eff37f10c179870e0"
@@ -1718,6 +1763,15 @@ grunt-html@~8.2.0:
     chalk "1.1.3"
     vnu-jar "17.0.1"
 >>>>>>> Splitting up "dependencies" and "devDependencies". For legibility, mostly.
+=======
+grunt-html@~8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/grunt-html/-/grunt-html-8.2.0.tgz#a8d93bd27caa8b67def2ddff84ded160ff9f2fdc"
+  dependencies:
+    async "2.1.4"
+    chalk "1.1.3"
+    vnu-jar "17.0.1"
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
 
 grunt-jsdoc@~2.1.0:
   version "2.1.0"
@@ -1943,8 +1997,11 @@ http-signature@~1.1.0:
     sshpk "^1.7.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 iconv-lite@~0.4.13, iconv-lite@0.4.15:
 =======
+=======
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
 iconv-lite@~0.4.13:
 >>>>>>> Splitting up "dependencies" and "devDependencies". For legibility, mostly.
   version "0.4.15"
@@ -2258,6 +2315,7 @@ js-tokens@^3.0.0:
 
 js-yaml@^3.5.1:
 <<<<<<< HEAD
+<<<<<<< HEAD
   version "3.8.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.8.1.tgz#782ba50200be7b9e5a8537001b7804db3ad02628"
   dependencies:
@@ -2268,6 +2326,12 @@ js-yaml@^3.5.1:
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.7.0.tgz#5c967ddd837a9bfdca5f2de84253abe8a1c03b80"
   dependencies:
     argparse "^1.0.7"
+=======
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.7.0.tgz#5c967ddd837a9bfdca5f2de84253abe8a1c03b80"
+  dependencies:
+    argparse "^1.0.7"
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
     esprima "^2.6.0"
 >>>>>>> Splitting up "dependencies" and "devDependencies". For legibility, mostly.
 
@@ -2791,6 +2855,7 @@ node-gyp@^3.3.1:
     which "1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 node-sass@~4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.5.0.tgz#532e37bad0ce587348c831535dbc98ea4289508b"
@@ -2799,6 +2864,11 @@ node-sass@~4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.1.1.tgz#dc3e27d25bd827b6276ea243be357c7c7cd07111"
 >>>>>>> Splitting up "dependencies" and "devDependencies". For legibility, mostly.
+=======
+node-sass@~4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.1.1.tgz#dc3e27d25bd827b6276ea243be357c7c7cd07111"
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
   dependencies:
     async-foreach "^0.1.3"
     chalk "^1.1.1"
@@ -3087,10 +3157,13 @@ postcss-value-parser@^3.2.3:
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.0.tgz#87f38f9f18f774a4ab4c8a232f5c5ce8872a9d15"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 postcss@^5.0.0, postcss@^5.2.11:
   version "5.2.12"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.12.tgz#6a2b15e35dd65634441bb0961fa796904c7890e0"
 =======
+=======
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
 postcss@^5.0.0, postcss@^5.2.8:
   version "5.2.8"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.8.tgz#05720c49df23c79bda51fd01daeb1e9222e94390"
@@ -3146,6 +3219,7 @@ punycode@^1.4.1:
 qs@~5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-5.1.0.tgz#4d932e5c7ea411cca76a312d39a606200fd50cd9"
+<<<<<<< HEAD
 
 qs@~6.3.0:
   version "6.3.0"
@@ -3165,6 +3239,16 @@ qs@6.2.1:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.2.1.tgz#ce03c5ff0935bc1d9d69a9f14cbd18e568d67625"
 =======
 >>>>>>> Splitting up "dependencies" and "devDependencies". For legibility, mostly.
+=======
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
+
+qs@5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-5.2.0.tgz#a9f31142af468cb72b25b30136ba2456834916be"
+
+qs@6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.2.0.tgz#3b7848c03c2dece69a9522b0fae8c4126d745f3b"
 
 qs@5.2.0:
   version "5.2.0"
@@ -3577,10 +3661,14 @@ stat-mode@^0.2.0:
   resolved "https://registry.yarnpkg.com/stat-mode/-/stat-mode-0.2.2.tgz#e6c80b623123d7d80cf132ce538f346289072502"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "statuses@>= 1.3.1 < 2", statuses@~1.3.1, statuses@1:
 =======
 "statuses@>= 1.3.1 < 2", statuses@~1.3.0, statuses@1:
 >>>>>>> Splitting up "dependencies" and "devDependencies". For legibility, mostly.
+=======
+"statuses@>= 1.3.1 < 2", statuses@~1.3.0, statuses@1:
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.3.1.tgz#faf51b9eb74aaef3b3acf4ad5f61abf24cb7b93e"
 
@@ -4004,6 +4092,7 @@ vinyl@^1.0.0:
     replace-ext "0.0.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 vnu-jar@17.2.1:
   version "17.2.1"
   resolved "https://registry.yarnpkg.com/vnu-jar/-/vnu-jar-17.2.1.tgz#fc9403a04b01226c0ce33700f1914b4652b42df8"
@@ -4012,6 +4101,11 @@ vnu-jar@17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/vnu-jar/-/vnu-jar-17.0.1.tgz#97a29f951ab2ff232ca310eb1dc67a29a2060aa5"
 >>>>>>> Splitting up "dependencies" and "devDependencies". For legibility, mostly.
+=======
+vnu-jar@17.0.1:
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/vnu-jar/-/vnu-jar-17.0.1.tgz#97a29f951ab2ff232ca310eb1dc67a29a2060aa5"
+>>>>>>> 2781c73036a1cd55a8db48aaa139899a43776443
 
 void-elements@^2.0.1:
   version "2.0.1"
