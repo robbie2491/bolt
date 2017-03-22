@@ -220,8 +220,11 @@ class Content implements \ArrayAccess
 
             return twig_include($this->app['twig'], $this->getTemplateContext(), $template, [], true, false, true);
         } catch (\Twig_Error $e) {
-            $message = sprintf('Rendering a record Twig snippet failed: %s', $e->getRawMessage());
-            $this->app['logger.system']->critical($message, ['event' => 'exception', 'exception' => $e]);
+            $message = sprintf(
+                '<div style="border: 1px solid #999; color: #333; padding: 0.5em; background-color: #F0D0D0;">Rendering a Twig snippet inside content failed: <br>%s</div>',
+                $e->getRawMessage()
+            );
+            $this->app['logger.system']->critical(strip_tags($message), ['event' => 'exception', 'exception' => $e]);
 
             return $message;
         }
