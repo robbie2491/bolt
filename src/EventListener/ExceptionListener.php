@@ -10,6 +10,8 @@ use Bolt\Exception\Configuration\Validation\Database\MissingDatabaseExtensionExc
 use Bolt\Exception\Configuration\Validation\Database\SqlitePathException;
 use Bolt\Exception\Configuration\Validation\System\AbstractSystemValidationException;
 use Bolt\Exception\Configuration\Validation\System\CacheValidationException;
+use Bolt\Exception\Content\ContentExceptionInterface;
+use Bolt\Exception\Content\FieldTwigRenderException;
 use Bolt\Exception\Database\DatabaseConnectionException;
 use Bolt\Exception\Database\DatabaseExceptionInterface;
 use Bolt\Filesystem\Exception\IOException;
@@ -29,6 +31,12 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
+use Twig_Sandbox_SecurityError as SecurityError;
+use Twig_Sandbox_SecurityNotAllowedFilterError as SecurityFilterError;
+use Twig_Sandbox_SecurityNotAllowedFunctionError as SecurityFunctionError;
+use Twig_Sandbox_SecurityNotAllowedMethodError as SecurityMethodError;
+use Twig_Sandbox_SecurityNotAllowedPropertyError as SecurityPropertyError;
+use Twig_Sandbox_SecurityNotAllowedTagError as SecurityTagError;
 
 /**
  * HTTP kernel exception routing listener.
@@ -124,11 +132,17 @@ class ExceptionListener implements EventSubscriberInterface
 
         $exception = $event->getException();
 
+        $html = null;
         if ($exception instanceof DatabaseExceptionInterface) {
             $html = $this->renderDatabaseException($exception);
         } elseif ($exception instanceof AbstractSystemValidationException) {
             $html = $this->renderSystemValidationException($exception);
-        } else {
+        } elseif ($exception instanceof ContentExceptionInterface) {
+            $html = $this->renderContentException($exception);
+        }
+
+        // If exception didn't match above or they didn't handle the exception, use the generic template.
+        if (!$html) {
             $html = $this->renderException($exception);
         }
 
@@ -210,6 +224,48 @@ class ExceptionListener implements EventSubscriberInterface
         }
 
         return $this->twig->render('@bolt/exception/system/exception.twig', $context);
+    }
+
+    protected function renderContentException(ContentExceptionInterface $exception)
+    {
+        // Only FieldTwigRenderException's are handled right now
+        if (!$exception instanceof FieldTwigRenderException) {
+            return null;
+        }
+
+        $template = '@bolt/exception/content/field/twig_error.twig';
+        $context = $this->getContext($exception);
+        $context['field'] = $exception->getFieldName();
+
+        // TODO show source snippet
+        // $source = $exception->getSource();
+
+        $twigError = $exception->getTwigError();
+
+        if ($twigError instanceof SecurityError) {
+            $template = '@bolt/exception/content/field/twig_security_error.twig';
+
+            if ($twigError instanceof SecurityTagError) {
+                $context['type'] = 'tag';
+                $context['tag'] = $twigError->getTagName();
+            } elseif ($twigError instanceof SecurityFilterError) {
+                $context['type'] = 'filter';
+                $context['filter'] = $twigError->getFilterName();
+            } elseif ($twigError instanceof SecurityFunctionError) {
+                $context['type'] = 'function';
+                $context['function'] = $twigError->getFunctionName();
+            } elseif ($twigError instanceof SecurityMethodError) {
+                $context['type'] = 'method';
+                $context['class'] = $twigError->getClassName();
+                $context['method'] = $twigError->getMethodName();
+            } elseif ($twigError instanceof SecurityPropertyError) {
+                $context['type'] = 'property';
+                $context['class'] = $twigError->getClassName();
+                $context['property'] = $twigError->getPropertyName();
+            }
+        }
+
+        return $this->twig->render($template, $context);
     }
 
     /**

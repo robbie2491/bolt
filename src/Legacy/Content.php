@@ -2,6 +2,8 @@
 
 namespace Bolt\Legacy;
 
+use Bolt\Exception\Content\FieldRenderException;
+use Bolt\Exception\Content\FieldTwigRenderException;
 use Bolt\Storage\Entity;
 use Maid\Maid;
 use Silex;
@@ -151,7 +153,7 @@ class Content implements \ArrayAccess
                     // Deprecated: This should be moved to a render function in
                     // Bolt\Storage\Field\Type\MarkdownType eventually.
                     $value = $this->app['markdown']->text($this->values[$name]);
-                    $value = $this->preParse($value, $allowtwig);
+                    $value = $this->preParse($value, $allowtwig, $name);
                     $value = new \Twig_Markup($value, 'UTF-8');
 
                     break;
@@ -159,7 +161,7 @@ class Content implements \ArrayAccess
                 case 'html':
                 case 'text':
                 case 'textarea':
-                    $value = $this->preParse($this->values[$name], $allowtwig);
+                    $value = $this->preParse($this->values[$name], $allowtwig, $name);
                     $value = new \Twig_Markup($value, 'UTF-8');
 
                     break;
@@ -200,7 +202,7 @@ class Content implements \ArrayAccess
      *
      * @return string
      */
-    public function preParse($snippet, $allowtwig)
+    public function preParse($snippet, $allowtwig, $fieldName = 'Unknown')
     {
         // Quickly verify that we actually need to parse the snippet!
         if (!$allowtwig || !preg_match('/[{][{%#]/', $snippet)) {
@@ -220,13 +222,7 @@ class Content implements \ArrayAccess
 
             return twig_include($this->app['twig'], $this->getTemplateContext(), $template, [], true, false, true);
         } catch (\Twig_Error $e) {
-            $message = sprintf(
-                "Rendering a Twig snippet inside content failed: \n%s",
-                $e->getRawMessage()
-            );
-            $this->app['logger.system']->critical(strip_tags($message), ['event' => 'exception', 'exception' => $e]);
-
-            throw new \Twig_Error($message);
+            throw new FieldTwigRenderException($e, $fieldName, $snippet);
         }
     }
 

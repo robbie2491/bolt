@@ -1,0 +1,15 @@
+{% extends '@bolt/exception/exception.twig' %}
+
+{% block page_main %}
+    <div class="row">
+        {% block title %}
+            Failed to render content
+            {% if debug %}
+                for field: <code>{{ field }}</code>
+            {% endif %}
+        {% endblock %}
+
+        {% block context %}
+        {% endblock %}
+    </div>
+{% endblock %}

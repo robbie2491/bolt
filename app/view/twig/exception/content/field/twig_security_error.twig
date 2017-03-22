@@ -1,0 +1,19 @@
+{% extends '@bolt/exception/content/field/twig_error.twig' %}
+
+{% block title %}
+    Security error blah
+{% endblock %}
+
+{% block context %}
+    {% if type === 'tag' %}
+        Twig tag <code>{{ tag }}</code> is not allowed.
+    {% elseif type === 'filter' %}
+        Twig filter <code>{{ filter }}</code> is not allowed.
+    {% elseif type === 'function' %}
+        Twig function <code>{{ function }}</code> is not allowed.
+    {% elseif type === 'method' %}
+        Calling <code>{{ method }}</code> method on a <code>{{ class }}</code> object is not allowed.
+    {% elseif type === 'property' %}
+        Calling <code>{{ property }}</code> property on a <code>{{ class }}</code> object is not allowed.
+    {% endif %}
+{% endblock %}
