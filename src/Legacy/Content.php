@@ -199,8 +199,10 @@ class Content implements \ArrayAccess
      *
      * @param string  $snippet
      * @param boolean $allowtwig
+     * @param string  $fieldName
      *
      * @return string
+     * @throws FieldTwigRenderException
      */
     public function preParse($snippet, $allowtwig, $fieldName = 'Unknown')
     {
